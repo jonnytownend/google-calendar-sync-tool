@@ -15,6 +15,7 @@ This tool can be used to two-way sync two Google calendars so that events in one
 - Using this tool requires access to the two Google accounts to be synced, and access to Google Drive on one of the accounts (the 'primary' account) where a new Google Apps Script will be created and configured.
 - Your primary account must have access to your secondary account's calendar. This can be done by sharing the calendar with the primary account (instructions [here](https://support.google.com/calendar/answer/37082?hl=en)).
 - You must have Google's `clasp` CLI installed. Install with `npm install @google/clasp -g`, or follow setup instructions [here](https://developers.google.com/apps-script/guides/clasp).
+- You must have the Apps Script API enabled for your primary account. You can enable it by navigating [here](https://script.google.com/home/usersettings)) when logged in to your primary account.
 
 ### Configure the tool
 
@@ -24,7 +25,7 @@ This tool can be used to two-way sync two Google calendars so that events in one
 ### Deploy the tool to Drive
 
 1. Run `clasp login` to link the repository with your **primary** Google account.
-2. Run `clasp create [scriptTitle]` to create a new Apps Script (you can name it whatever you like!)
+2. Run `clasp create --type standalone [scriptTitle]` to create a new Apps Script (you can name it whatever you like!)
 3. Run `clasp push` to push configuration files to the new script.
 4. Run `clasp open` to open the new script in the Apps Script editor.
 
