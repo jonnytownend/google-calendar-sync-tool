@@ -1,0 +1,3 @@
+[submodule "custom-config"]
+	path = custom-config
+	url = https://github.com/jonnytownend/google-calendar-sync-tool-config
